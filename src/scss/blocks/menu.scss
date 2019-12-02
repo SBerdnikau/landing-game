@@ -1,72 +1,17 @@
-.menu{
-  padding: 20px 0 20px 40px;
-
-}
-
-.menu__list{
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.menu__link{
-  font-size: 15px;
-  font-family: "Gotham",sans-serif;
-  color: $color-menuText;
-  line-height: 1.2;
-  text-decoration: none;
-  position: relative;
-  padding-right: 50px;
-  position: relative;
-
-  &:hover{
-    text-decoration: underline;
-  }
-
-  &::after{
-    content: '';
-    background-image: url("../images/arrow-down.png");
-    position: absolute;
-    display: block;
-    top: 2px;
-    right: 30px;
-    width: 17px;
-    height: 14px;
-  }
-
-}
-
-
-.menu__element--first{
-  &::after{
-    content: none;
-  }
-}
-
-.menu__element--last{
-  &::after{
-    content: none;
-  }
-}
-
-.menu__element__submenu{
-    position: absolute;
-    height: 85px;
-    width: 135px;
-    display: none;
-    cursor: pointer;
-    background: #fff;
-    padding: 10px;
-
-    ul{
-      list-style: none;
-      margin-top: 5px;
-
-    }
-
-}
-
-.menu__element{
-  padding: 4px;
+nav {background-color: #00a4d5; position: relative; text-align: center}
+nav ul {display: inline-block; background-color: #00a4d5; margin: 0; padding: 0; list-style: none; }
+nav ul li {display: inline-block}
+nav ul li a {display: block; padding: 10px 15px; color: #fff; text-decoration: none;}
+.openMenu {display: none; color: #fff; padding: 10px 15px; cursor: pointer}
+.menu-item {position: relative}
+.menu-item>span {display: none;}
+.sub-menu {height: 0; overflow: hidden; opacity: 0; transition: all 0.5s ease-in; position: absolute; width: 100%; top: 100%; left: 0;
+  text-align: left}
+@media (max-width: 767px) {
+  .openMenu {display: block}
+  nav ul#menu {display: none; position: absolute; top: 100%; left: 0; width: 100%; transition: all 0.5s ease-in;}
+  nav ul#menu.active {display: block}
+  nav ul li {display: block}
+  .menu-item>span {display: block; position: absolute; right: 10px; top: 10px; color: #fff;}
+  .sub-menu {position: static}
 }
