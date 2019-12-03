@@ -1,0 +1,104 @@
+$color-gamesTitle:  #4b4b4b;
+$color-gamesBg:     #fafafa;
+$color-gamesText:   #b1b1b1;
+
+.games{
+  background: $color-gamesBg;
+}
+
+.games__list{
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+}
+
+.games__title--hide{
+  @include visually-hidden();
+}
+
+.games__item--1 {
+  display: flex;
+  flex-basis: 512px;
+
+  .item__img {
+    background: url("../images/img-3.jpg") left top no-repeat;
+    background-size: cover;
+    max-width: 260px;
+    padding: 432px 142px 30px 35px;
+
+    span {
+      background-color: $second;
+        font-size: 18px;
+        font-family: "Gotham Medium", sans-serif;
+        color: $white;
+        line-height: 1.333;
+        padding: 6px 26px;
+    }
+  }
+
+  .item__info{
+    padding: 46px 42px 42px 42px;
+  }
+
+  .item__title{
+    font-size: 29.371px;
+    font-family: "Gotham Light", sans-serif;
+    font-weight: 300;
+    color: $color-gamesTitle;
+    line-height: 1.396;
+    margin: 0;
+    max-width: 165px;
+  }
+
+  .item__description{
+    font-size: 18px;
+    font-family: "Gotham Light",sans-serif;
+    color: $color-gamesText;
+    line-height: 1.333;
+    margin: 26px 0 0 0;
+    max-width: 165px;
+  }
+
+  .item__version{
+    margin-top: 30px;
+  }
+
+  .item__version__title{
+    font-size: 18px;
+    font-family: "Gotham Medium", sans-serif;
+    font-weight: 700;
+    color: $second;
+    line-height: 1.3;
+    margin: 0 0 26px 0;
+
+    span{
+      border: 2px solid $second;
+      border-radius: 50%;
+      width: 47px;
+      height: 46px;
+      padding: 7px 12px;
+      margin-right: 14px
+    }
+
+  }
+
+  .item__btn{
+    @include button(){
+      margin-top: 60px;
+    };
+  }
+
+}
+
+
+.games__item--2 {
+  display: flex;
+  flex-basis: 245px;
+}
+
+
+.games__item--3{
+  display: flex;
+  flex-basis: 506px;
+}
