@@ -1,0 +1,40 @@
+$carousel__text: rgb(34, 34, 34);
+$carousel__subtitle: rgb(251, 129, 34);
+
+.contact__carousel{
+  max-width: 555px;
+  margin: 50px 0;
+}
+
+.carousel__description{
+  font-size: 18px;
+  font-family: "Open Sans",sans-serif;
+  color: $carousel__text;
+  line-height: 1.667;
+  text-align: center;
+  width: 545px;
+  margin: 0;
+}
+
+.carousel__subtitle{
+  font-size: 16px;
+  font-family: "Poppins ",sans-serif;
+  color: $carousel__subtitle;
+  font-weight: bold;
+  line-height: 1.875;
+  text-align: center;
+  width: 545px;
+  margin: 25px 0 0 0;
+}
+
+@media (max-width: 768px) {
+  .contact__carousel{
+    max-width: 355px;
+  }
+  .carousel__description{
+    width: 320px;
+  }
+  .carousel__subtitle{
+    width: 320px;
+  }
+}

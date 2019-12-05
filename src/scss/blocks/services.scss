@@ -1,0 +1,136 @@
+$color-servicesTitle:  rgb(51, 51, 51);
+$color-servicesText   :rgb(140, 140, 140);
+
+.services__title--hide{
+  @include visually-hidden();
+}
+
+.services{
+  background: url("/images/fon2-1.png") 0 -140px no-repeat, url("../images/fon2-2.png") 100% 190% no-repeat;
+}
+
+.services__img{
+  background-size: cover;
+}
+
+.services__title{
+  font-size: 36px;
+  font-family: "Raleway Bold", sans-serif;
+  color: $color-servicesTitle;
+  line-height: 1.2;
+  text-align: left;
+  margin: 0 0 40px 0;
+}
+
+.services__list{
+  margin-bottom: 185px;
+  padding: 0;
+  list-style: none;
+}
+
+.services__description{
+  font-size: 17px;
+  font-family: "Myriad Pro",sans-serif;
+  color: $color-servicesText;
+  line-height: 1.588;
+  margin: 0 0 45px 0;
+}
+
+.services__item{
+  display: flex;
+  justify-content: space-between;
+}
+
+.services__item--1{
+  margin: 0;
+  padding-top: 335px;
+}
+
+.services__item--2{
+  margin-top: 170px;
+}
+
+.services__information{
+  max-width: 520px;
+}
+
+
+
+@media (max-width: 1024px){
+  .services{
+    background: none;
+  }
+  .services__item--1{
+    padding-top: 100px;
+  }
+
+  .services__item--1.services__information{
+    margin-left: 20px;
+  }
+  .services__item--2.services__information{
+    max-width: 520px;
+  }
+  .services__title{
+    font-size: 24px;
+  }
+  .services__description{
+    font-size: 15px;
+  }
+  .services__btn.button{
+    font-size: 15px;
+  }
+  .services__item--1 .services__img {
+    margin-right: 20px;
+  }
+
+  .services__item--2 .services__img {
+    margin-left: 20px;
+  }
+
+}
+
+
+@media (max-width: 768px) {
+  .services__information {
+     max-width: 320px;
+   }
+  .services__title{
+    font-size: 22px;
+  }
+  .services__description{
+    font-size: 14px;
+  }
+  .services__btn.button{
+    font-size: 14px;
+  }
+  .services__list {
+    margin-bottom: 85px;
+  }
+}
+
+@media(max-width: 480px) {
+  .services__information {
+    max-width: 100%;
+  }
+  .services__item--2 {
+    margin-top: 36px;
+  }
+  .services__item--1 {
+    padding-top: 35px;
+  }
+  .services__item--2, .services__item--1 {
+    flex-wrap: wrap;
+  }
+  .services__item--2 .services__img {
+    margin-left: 0;
+  }
+  .services__item--1 .services__img {
+    margin-right: 0;
+  }
+  .services__title {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+
+
+}

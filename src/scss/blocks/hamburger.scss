@@ -1,0 +1,88 @@
+
+.menu__hamburger {
+  width: 50px;
+  height: 50px;
+}
+
+.hamburger {
+  background: none;
+  display: block;
+  cursor: pointer;
+  border: 3px solid $white;
+  transition-property: border-color;
+  transition-duration: 500ms;
+}
+.hamburger:hover,
+.hamburger:active {
+  border-color: $second;
+}
+.hamburger:hover .hamburger__element,
+.hamburger:active .hamburger__element {
+  background-color: $second;
+}
+.hamburger:hover .hamburger__element::after,
+.hamburger:hover .hamburger__element::before,
+.hamburger:active .hamburger__element::after,
+.hamburger:active .hamburger__element::before {
+  background-color: $second;
+}
+.hamburger:focus {
+  border-color: $second;
+}
+
+.hamburger__element {
+  width: 27px;
+  height: 3px;
+  background-color: $white;
+  display: block;
+  margin: 0 auto;
+  transition-property: background-color;
+  transition-duration: 500ms; }
+.hamburger__element::after,
+.hamburger__element::before {
+  content: '';
+  width: 27px;
+  height: 3px;
+  background-color: $white;
+  display: block;
+  margin: 0 auto;
+  transition-property: background-color;
+  transition-duration: 500ms; }
+.hamburger__element::after {
+  transform: translateY(4px); }
+.hamburger__element::before {
+  transform: translateY(-7px);
+}
+
+.hamburger--active {
+  position: relative;
+  z-index: 1;
+  border-color: $second;
+}
+.hamburger--active:hover,
+.hamburger--active:active {
+  border-color: $second;
+}
+.hamburger--active:hover .hamburger__element,
+.hamburger--active:active .hamburger__element {
+  background-color: $white;
+}
+.hamburger--active:hover .hamburger__element::after,
+.hamburger--active:hover .hamburger__element::before,
+.hamburger--active:active .hamburger__element::after,
+.hamburger--active:active .hamburger__element::before {
+  background-color: $white;
+}
+.hamburger--active .hamburger__element {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.hamburger--active .hamburger__element::after {
+  transform: rotate(-90deg);
+  position: relative;
+  z-index: 1;
+}
+.hamburger--active .hamburger__element::before {
+  display: none;
+}

@@ -1,2 +1,2 @@
-# landing-game
-landing game
+# landing-education
+landing-education

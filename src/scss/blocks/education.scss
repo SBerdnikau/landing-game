@@ -1,0 +1,165 @@
+.education{
+  background: url('../images/bg.jpg') top center no-repeat $first;
+  background-size: 100%;
+}
+
+.education__info{
+  flex-basis: 555px;
+}
+
+.education__courses{
+  display: flex;
+  padding-top: 100px;
+  padding-bottom: 90px;
+  justify-content: space-between;
+}
+
+.education__title{
+  font-size: 70px;
+  font-family: "Raleway Bold",sans-serif;
+  color: $white;
+  line-height: 1.071;
+  margin:  0 0 40px 0;
+}
+
+.education__description{
+  font-size: 17px;
+  font-family: "Open Sans", sans-serif;
+  color: $white;
+  line-height: 1.765;
+  margin: 0 0 45px 0;
+}
+
+.education__btn{
+  margin-bottom: 109px;
+}
+
+.education__imgCourses{
+  flex-basis: 626px;
+  position: relative;
+  background: url("../images/people.png") top right no-repeat;
+  background-size: contain;
+}
+
+.imgCourses__list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.imgCourses__item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imgCourses__subTitle{
+  font-size: 13.15px;
+  font-family: "Poppins-SemiBold", sans-serif;
+  color: $white;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.item-1{
+  position: absolute;
+  top: 28px;
+  left: 310px;
+  transform: rotate(351deg);
+
+  .imgCourses__subTitle{
+    color: $black;
+  }
+
+}
+
+.item-2{
+  position: absolute;
+  top: 156px;
+  left: 287px;
+}
+
+.item-3{
+  position: absolute;
+  top: 140px;
+  left: 444px;
+  transform: rotate(16deg);
+}
+
+.item-4{
+  position: absolute;
+  top: 268px;
+  left: 192px;
+}
+
+.item-5{
+  position: absolute;
+  top: 271px;
+  left: 314px;
+}
+
+.item-6{
+  position: absolute;
+  top: 268px;
+  left: 428px;
+}
+
+@media (max-width: 1024px) {
+  .education__info {
+    flex-basis: 564px;
+  }
+  .education__title {
+    font-size: 52px;
+  }
+  .education__description {
+    font-size: 15px;
+  }
+  .education__btn.button {
+    font-size: 15px;
+  }
+  .education__courses {
+    padding-top: 30px;
+  }
+  .item-1 {
+    left: 237px;
+  }
+  .item-2 {
+    left: 214px;
+  }
+  .item-3 {
+    left: 357px;
+  }
+  .item-4 {
+    left: 124px;
+  }
+  .item-5 {
+    left: 241px;
+  }
+  .item-6 {
+    left: 341px;
+  }
+}
+
+@media (max-width: 980px) {
+  .education__imgCourses{
+    display: none;
+  }
+  .education__info {
+    flex-basis: auto;
+  }
+  .education__btn {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .education__title {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 380px) {
+  .education__title {
+    font-size: 24px;
+  }
+}

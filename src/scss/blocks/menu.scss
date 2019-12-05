@@ -1,0 +1,152 @@
+.menu{
+  display: flex;
+  align-items: center;
+}
+
+.menu__list{
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu__item{
+  margin-right: 55px;
+
+  &:last-child{
+    margin-right: 0;
+  }
+}
+
+.menu__link {
+  font-size: 18px;
+  font-family: "Raleway", sans-serif;
+  color: $white;
+  line-height: 3.611;
+  text-decoration: none;
+
+  &:hover{
+    text-decoration: underline;
+  }
+
+}
+
+.menu__btn.button{
+  margin-left: 100px;
+}
+
+.menu__hamburger.hamburger{
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .menu__link {
+    font-size: 15px;
+  }
+  .menu__btn.button{
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 780px) {
+
+  .menu{
+    flex-direction: row-reverse;
+    position: relative;
+  }
+
+  .menu__list{
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: $second;
+  }
+  .menu__hamburger.hamburger{
+    display: block;
+    z-index: 1;
+  }
+
+  .menu__btn.button {
+    margin-left: 0;
+    margin-right: 230px;
+  }
+
+  .menu--active .menu__list{
+    padding: 20px;
+    display: block;
+
+  }
+  .menu--active .menu__link{
+    padding: 10px 0;
+  }
+  .menu--active .menu__link:hover{
+    background-color: transparent;
+  }
+
+  .menu--active .menu__hamburger span{
+    display: block;
+  }
+
+  .menu--active .menu__hamburger::before{
+    transform: rotate(45deg);
+  }
+
+  .menu--active .menu__hamburger::after{
+    transform: rotate(-45deg) translate(3px, -3px);
+  }
+
+
+  .menu.menu--active{
+    flex-direction: row-reverse;
+  }
+
+
+  .menu--active .menu__item{
+    margin-right: 100px;
+  }
+
+  .menu--active .menu{
+    align-items: center;
+  }
+
+}
+
+@media (max-width: 580px) {
+  .menu__btn.button {
+    margin-right: 0;
+  }
+  .header__logo {
+    flex-basis: 300px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .menu{
+    margin-top: 10px;
+  }
+  .menu__btn.button {
+    margin-right: 210px;
+  }
+
+  .menu--active .menu__list {
+    width: calc(100% - 40px);
+  }
+
+}
+
+@media (max-width: 380px) {
+  .menu{
+    margin-top: 10px;
+  }
+  .menu__btn.button {
+    margin-right: 172px;
+  }
+
+  .menu--active .menu__list {
+    width: calc(100% - 40px);
+  }
+
+}
