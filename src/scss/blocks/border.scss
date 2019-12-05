@@ -1,0 +1,85 @@
+.border{
+  background:url("../images/bg-2.png") left top no-repeat,
+  url("../images/bg-1.jpg") $black center top no-repeat;
+
+  padding-bottom: 115px;
+}
+
+.border__wrap{
+  padding-top: 55px;
+}
+
+.border__header{
+  background: $white;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1025px;
+  margin-bottom: 165px;
+}
+
+.border__info{
+  max-width: 590px;
+}
+
+.border__title {
+  font-size: 42px;
+  font-family: "Gotham Book", sans-serif;
+  color: $white;
+  line-height: 1.381;
+  margin: 0;
+
+
+  &::after {
+    content: '';
+    display: block;
+    background-color: $second;
+    width: 186px;
+    height: 4px;
+    margin-top: 24px;
+  }
+
+}
+
+.border__subtitle{
+  font-size: 42px;
+  font-family: "Gotham",sans-serif;
+  color: $white;
+  font-weight: bold;
+  line-height: 1.381;
+  margin: 19px 0 36px 0 ;
+}
+
+.border__description{
+  font-size: 18px;
+  font-family: "Gotham Thin",sans-serif;
+  color: $white;
+  line-height: 1.333;
+  margin: 0 0 35px 0;
+}
+
+.border__list{
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.border__btn{
+  @include button();
+}
+
+.border__item--google .border__btn{
+  @include button($background: $white, $setWidth: 192px ){
+    color: $black;
+  }
+}
+
+.border__item{
+  margin-right: 10px;
+
+  &:last-child{
+    margin-right: 0;
+  }
+
+}
+

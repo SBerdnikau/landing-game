@@ -1,0 +1,40 @@
+.footer__wrap{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__left{
+  display: flex;
+  align-items: center;
+}
+
+.footer__nav{
+  display: flex;
+  margin: 0;
+}
+
+.footer__item{
+  margin: 0 70px 0 0;
+  list-style: none;
+
+  &:last-child{
+    margin-right: 0;
+  }
+}
+
+.footer__link, .footer__lang{
+  font-size: 15px;
+  font-family: "Gotham Medium", sans-serif;
+  color: rgb(46, 52, 59);
+  line-height: 1.2;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer__link:hover{
+  text-decoration: underline;
+  color: $second;
+}

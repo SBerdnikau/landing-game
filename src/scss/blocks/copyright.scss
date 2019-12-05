@@ -1,0 +1,14 @@
+.copyright__wrap{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright__year, .copyright__privacy{
+  font-size: 15px;
+  font-family: "Gotham Book", sans-serif;
+  color: rgb(46, 52, 59);
+  line-height: 1.2;
+  margin: 0;
+  padding: 35px 0 30px 0
+}

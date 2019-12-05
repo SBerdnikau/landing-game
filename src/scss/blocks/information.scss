@@ -1,0 +1,109 @@
+$color-informationBg:     green;
+$color-informationText:   #b1b1b1;
+$color-informationTitle:  #4b4b4b;
+
+.information__title--hide{
+  @include visually-hidden();
+}
+
+.information{
+  background: $color-informationBg;
+
+  &__wrap{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__blog{
+    background: $white;
+  }
+
+  &__tweets{
+    background: $white;
+  }
+
+  &__press{
+    background: $white;
+  }
+
+}
+
+.press__info__description{
+  max-width: 356px;
+  margin: 0;
+  padding: 0;
+}
+
+
+.tweets__info__description,
+.press__info__title{
+  width: 353px;
+  padding: 0;
+  margin: 0;
+}
+
+.blog{
+
+  &__title{
+    background: $color-informationBg;
+    margin: 0;
+    &__h2{
+      margin: 0;
+    }
+  }
+
+  &__icon{
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+
+    &--1{
+      background: url("../images/blog-face-1.jpg") center center no-repeat;
+      background-size: cover;
+    }
+
+    &--2{
+      background: url("../images/blog-face-2.jpg") center center no-repeat;
+      background-size: cover;
+    }
+
+  }
+
+  &__list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item{
+    display: flex;
+  }
+
+  &__info{
+    width: 205px;
+    margin: 0;
+  }
+
+}
+
+.tweets {
+  &__title {
+    background: $color-informationBg;
+    margin: 0;
+
+    &__h2 {
+      margin: 0;
+    }
+  }
+}
+
+.press{
+  &__title{
+    background: $color-informationBg;
+    margin: 0;
+    &__h2{
+      margin: 0;
+    }
+  }
+}

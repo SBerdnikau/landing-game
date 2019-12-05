@@ -1,0 +1,92 @@
+$byGameColor-span: #d4d4d4;
+$byGameColor-text: #4f4f4f;
+$byGameColor-description: rgb(177, 177, 177);
+
+.buyGame{
+  background: url("../images/bg-3.jpg") center top no-repeat;
+}
+
+.buyGame__title--hide{
+  @include visually-hidden();
+}
+
+.buyGame__info{
+  max-width: 588px;
+  padding-top: 110px;
+  padding-bottom: 160px;
+  margin: 0 0 0 auto;
+}
+
+.info__title{
+  font-size: 42px;
+  font-family: "Gotham Bold",sans-serif;
+  color: $byGameColor-text;
+  line-height: 1;
+  padding: 0;
+  margin: 0;
+
+  &::after{
+    content: '';
+    display: block;
+    background-color: $second;
+    width: 186px;
+    height: 4px;
+    margin-top: 26px ;
+  }
+
+  span{
+    font-size: 16px;
+    font-family: "Gotham Book",sans-serif;
+    color: $byGameColor-span;
+    line-height: 1;
+    max-width: 100px;
+    display: inline-block;
+
+  }
+
+}
+
+.info__subtitle{
+  font-size: 42px;
+  font-family: "Gotham Bold", sans-serif;
+  color: $byGameColor-text;
+  font-weight: bold;
+  line-height: 1;
+  padding: 0;
+  margin: 25px 0 0 0;
+}
+
+.info__description{
+  font-size: 18px;
+  font-family: "Gotham Thin", sans-serif;
+  color: $byGameColor-description;
+  line-height: 1.333;
+  padding: 0;
+  margin: 35px 0 0 0;
+}
+
+.info__list{
+  list-style: none;
+  display: flex;
+  margin: 35px 0 0 0;
+  padding: 0;
+}
+
+.info__btn{
+  @include button();
+}
+
+.info__item--google .info__btn{
+  @include button($background: $white, $setWidth: 192px ){
+    color: $black;
+  }
+}
+
+.info__item{
+  margin-right: 10px;
+
+  &:last-child{
+    margin-right: 0;
+  }
+
+}
