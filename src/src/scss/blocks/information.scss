@@ -1,0 +1,326 @@
+$color-informationBg:     #fafafa;
+$color-informationText:   #b1b1b1;
+$color-informationTitle:  #4b4b4b;
+
+.information__title--hide{
+  @include visually-hidden();
+}
+
+.information{
+  background: $color-informationBg;
+
+  &__wrap{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 65px;
+  }
+
+  &__blog{
+    background: $white;
+  }
+
+  &__tweets{
+    background: $white;
+  }
+
+  &__press{
+    background: $white;
+  }
+
+}
+
+.blog{
+
+  &__title{
+    background: $color-informationBg;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__h2{
+      font-size: 36px;
+      font-family: "Gotham Bold", sans-serif;
+      color: rgb(34, 34, 34);
+      font-weight: bold;
+      line-height: 1.2;
+      margin: 0;
+      padding: 25px 0;
+    }
+
+    &__a{
+      font-size: 16px;
+      font-family: "Gotham Light", sans-serif;
+      color: $color-informationText;
+      line-height: 1.501;
+      text-decoration: none;
+
+      &:hover{
+        text-decoration: underline;
+      }
+
+    }
+
+  }
+
+  &__icon{
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    margin: 45px 10px auto 20px;
+
+    &--1{
+      background: url("../images/blog-face-1.jpg") center center no-repeat;
+      background-size: cover;
+    }
+
+    &--2{
+      background: url("../images/blog-face-2.jpg") center center no-repeat;
+      background-size: cover;
+    }
+
+  }
+
+  &__list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item{
+    display: flex;
+  }
+
+  &__info{
+    width: 205px;
+    margin: 0;
+
+    &__title {
+      max-width: 236px;
+      padding: 45px 20px 10px 10px;
+      margin: 0;
+
+      a {
+        font-size: 22.381px;
+        font-family: "Gotham Bold", sans-serif;
+        color: $color-informationTitle;
+        font-weight: bold;
+        line-height: 1.308;
+        margin: 0;
+        text-decoration: none;
+      }
+    }
+
+    &__description{
+      font-size: 16px;
+      font-family: "Gotham Light", sans-serif;
+      color: $color-informationText;
+      line-height: 1.501;
+      padding: 15px 20px 15px 10px;
+      margin: 0;
+      max-width: 236px;
+    }
+
+  }
+
+}
+
+
+.press{
+
+  &__title{
+    background: $color-informationBg;
+    margin: 0;
+
+    &__h2{
+      font-size: 36px;
+      font-family: "Gotham Bold", sans-serif;
+      color: rgb(34, 34, 34);
+      font-weight: bold;
+      line-height: 1.2;
+      margin: 0;
+      padding: 25px 0;
+    }
+
+  }
+
+
+  &__info{
+
+    &__title {
+      max-width: 343px;
+      padding: 45px 20px 10px 20px;
+      margin: 0;
+
+      a {
+        font-size: 22.381px;
+        font-family: "Gotham Bold", sans-serif;
+        color: $color-informationTitle;
+        font-weight: bold;
+        line-height: 1.308;
+        margin: 0;
+        text-decoration: none;
+      }
+    }
+
+    &__description{
+      font-size: 16px;
+      font-family: "Gotham Light", sans-serif;
+      color: $color-informationText;
+      line-height: 1.501;
+      padding: 10px 20px 15px 20px;
+      margin: 0;
+      max-width: 348px;
+    }
+
+    &__link{
+      font-size: 16px;
+      font-family: "Gotham Book",sans-serif;
+      color: $second;
+      line-height: 1.501;
+      text-decoration: none;
+      padding: 15px 20px 20px 20px;
+      display: inline-block;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+
+  }
+
+}
+
+
+
+.tweets {
+
+  &__title {
+    background: $color-informationBg;
+    margin: 0;
+
+    &__h2 {
+      font-size: 36px;
+      font-family: "Gotham Bold", sans-serif;
+      color: rgb(34, 34, 34);
+      font-weight: bold;
+      line-height: 1.2;
+      margin: 0;
+      padding: 25px 0;
+    }
+  }
+
+  &__info{
+
+    &__description{
+      font-size: 16px;
+      font-family: "Gotham Light", sans-serif;
+      color: $color-informationText;
+      line-height: 1.501;
+      padding: 15px 20px 15px 20px;
+      margin: 0;
+      max-width: 350px;
+
+      a{
+        color: #59adeb;
+        text-decoration: none;
+
+        &:hover{
+          text-decoration: underline;
+        }
+
+      }
+
+    }
+
+    &__email{
+      padding: 70px 20px 20px 20px;
+      display: inline-block;
+    }
+
+    &__link{
+      display: inline-block;
+      font-size: 16px;
+      font-family: "Gotham Light",sans-serif;
+      color: rgb(89, 173, 235);
+      line-height: 1.501;
+      text-decoration: none;
+
+      &:hover{
+        text-decoration: underline;
+      }
+
+    }
+
+    &__icon{
+      margin-right: 10px;
+    }
+
+  }
+
+}
+
+
+@media (max-width: 1024px) {
+  .information{
+
+    &__wrap{
+      justify-content: center;
+    }
+    &__blog{
+      margin: 15px;
+    }
+    &__tweets{
+      margin: 15px;
+    }
+    &__press{
+      margin: 15px;
+    }
+
+  }
+}
+
+@media (max-width: 1024px) {
+  .information{
+
+    &__wrap{
+      padding-bottom: 60px;
+    }
+
+    &__blog{
+      width: 100%;
+    }
+    &__tweets{
+      width: 100%;
+    }
+    &__press{
+      width: 100%;
+    }
+
+  }
+
+  .blog{
+    &__title__h2{
+      font-size: 26px;
+    }
+    &__info__title a{
+      font-size: 18px;
+    }
+  }
+
+  .press{
+    &__title__h2{
+      font-size: 26px;
+    }
+    &__info__title a{
+      font-size: 18px;
+    }
+  }
+
+  .tweets{
+    &__title__h2{
+      font-size: 26px;
+    }
+  }
+
+}
