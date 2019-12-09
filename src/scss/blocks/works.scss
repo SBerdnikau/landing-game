@@ -1,0 +1,221 @@
+$color-worksBg:   #fafafa;
+$color-workTitle: #222222;
+$color-workText:  #999999;
+$olor-workTitle2: #4b4b4b;
+
+.work{
+  background: $color-worksBg;
+}
+
+.work__blockTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.blockTitle__title{
+    font-size: 36px;
+    font-family: "Gotham Book",sans-serif;
+    color: $color-workTitle;
+    font-weight: bold;
+    line-height: 1;
+    text-align: justifyLeft;
+    margin: 0;
+
+    &::after{
+      content: '';
+      display: block;
+      background-color: $second;
+      width: 49px;
+      height: 7px;
+      margin-top: 17px;
+    }
+
+  }
+
+.blockTitle__description{
+  font-size: 15px;
+  font-family: "Gotham Light",sans-serif;
+  color: $color-workText;
+  font-style: italic;
+  line-height: 1.667;
+  max-width: 762px;
+  margin: 0 0 7px 0;
+}
+
+.work__blockWorks{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 72px;
+  padding-bottom: 37px;
+}
+
+.blockWorks__info{
+  background: $white;
+  width: 630px;
+  padding: 40px 30px  20px 70px;
+  margin-right: 10px;
+
+  &:last-child{
+  margin-right: 0;
+}
+
+  &__title{
+    font-size: 22.381px;
+    font-family: "Gotham Bold", sans-serif;
+    color: $olor-workTitle2;
+    font-weight: bold;
+    line-height: 1.832;
+    margin: 0;
+  }
+
+  &__data{
+    display: flex;
+    margin-top: 17px;
+
+    &__city{
+      font-size: 16px;
+      font-family: "Gotham Light", sans-serif;
+      color: $color-workText;
+      line-height: 1.501;
+      margin: 0 8px 0 0;
+
+      img{
+        margin-right: 6px;
+      }
+
+    }
+
+    &__time{
+      display: flex;
+      align-items: center;
+      font-size: 12.789px;
+      font-family: "Gotham Light",sans-serif;
+      color: $color-workText;
+      line-height: 1.877;
+      margin: 0 0 0 8px;
+
+      img{
+        margin-right: 6px;
+      }
+
+    }
+
+  }
+
+}
+
+.blockWorks__description{
+  font-size: 14px;
+  font-family: "Gotham Light", sans-serif;
+  color: $color-workText;
+  line-height: 1.732;
+  margin: 18px 0 0 0;
+}
+
+.blockWorks__btn{
+  @include button($background: $white){
+    margin-top: 18px;
+    border: 1px solid $second;
+    color: $second;
+  };
+  &:hover, &:active{
+    @include button($background: $second);
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .blockTitle__title{
+    margin: 0 0 20px 0;
+  }
+
+  .blockWorks__info{
+
+    &__title{
+      font-size: 22px;
+      line-height: 1.2;
+    }
+
+    &__data{
+
+      &__city{
+        font-size: 12px;
+        line-height: 1.2;
+        width: 250px;
+      }
+
+      &__time{
+        font-size: 12px;
+        line-height: 1.2;
+
+      }
+
+    }
+
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .blockWorks__btn{
+    @include button($background: $white){
+      margin-top: 18px;
+      border: 1px solid $second;
+      color: $second;
+      font-size: 16px;
+    };
+    &:hover, &:active{
+      @include button($background: $second){
+        font-size: 16px;
+      };
+
+    }
+  }
+  .blockTitle__title{
+    font-size: 26px;
+  }
+  .blockTitle__description{
+    width: 600px;
+  }
+  .work__blockWorks {
+    flex-wrap: wrap;
+  }
+
+  .blockWorks__info{
+    width: 665px;
+    padding: 40px 30px 20px 30px;
+    margin-right: 0;
+    margin-bottom: 15px;
+
+    &__title{
+      font-size: 18px;
+      line-height: 1.2;
+    }
+
+    &__description{
+      width: 500px;
+    }
+
+    &__data{
+
+      &__city{
+        font-size: 12px;
+        line-height: 1.2;
+        width: 124px;
+      }
+
+      &__time{
+        font-size: 12px;
+        line-height: 1.2;
+
+      }
+
+    }
+
+  }
+
+}
+

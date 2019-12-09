@@ -1,0 +1,121 @@
+.mainMenu{
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  position: relative;
+}
+
+.mainMenu__list{
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mainMenu__item{
+  display: inline-block;
+  &:hover{
+    .mainMenu__subMenu{
+      display: block;
+    }
+  }
+}
+
+.mainMenu__link{
+  display: block;
+  padding: 25px 30px;
+  font-size: 15px;
+  font-family: "Gotham Medium", sans-serif;
+  color: $color-menuText;
+  font-weight: bold;
+  line-height: 1.2;
+  text-decoration: none;
+
+  &:hover {
+    color: $second;
+  }
+
+}
+
+.mainMenu__subMenu{
+  display: none;
+  position: absolute;
+  width: 20%;
+  top: 100%;
+  background: $white;
+  padding: 0;
+  list-style: none;
+}
+
+
+
+
+
+.hamburger__btn{
+  display: none;
+
+  span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: $black;
+  }
+}
+
+.mainMenu__subMenu__link{
+    display: block;
+    padding: 15px 25px;
+    font-size: 15px;
+    font-family: "Gotham Medium", sans-serif;
+    color: $color-menuText;
+    line-height: 1.2;
+    text-decoration: none;
+
+    &:hover{
+      text-decoration: underline;
+      color: $second;
+    }
+
+  }
+
+@media (max-width: 768px) {
+  .mainMenu{
+    flex-basis: 100%;
+  }
+  .mainMenu__list{
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  .mainMenu__item{
+    display: block;
+    border: 1px solid $first;
+    width: 100%;
+  }
+  .mainMenu__link{
+    display: block;
+  }
+
+  .mainMenu__subMenu{
+    display: none;
+    position: static;
+    width: 100%;
+    background: $first;
+    list-style: none;
+    z-index: 1;
+  }
+
+
+  .mainMenu__item{
+    display: inline-block;
+    &:hover{
+      .mainMenu__subMenu{
+        display: block;
+      }
+    }
+  }
+
+
+
+}
