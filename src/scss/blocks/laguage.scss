@@ -1,16 +1,30 @@
-.language{
-  border: none;
-  overflow: hidden;
 
+.language__list{
+  position: absolute;
+  width: 135px;
+  right: 560px;
+  top: 131px;
+  display: none;
+  cursor: pointer;
+  background: $first;
+  padding: 10px;
+  list-style: none;
+  z-index: 1;
+  box-shadow: 0 3px 2px $black;
 
-  &label:hover{
-    background: $second;
+  &--active{
+    display: block;
   }
 
 }
 
-@media (max-width: 375px) {
-  .language select{
-    width: 100%;
+.language__item{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  & p:hover{
+    color: $second
   }
+
 }
