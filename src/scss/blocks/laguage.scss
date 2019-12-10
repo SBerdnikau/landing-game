@@ -1,0 +1,16 @@
+.language{
+  border: none;
+  overflow: hidden;
+
+
+  &label:hover{
+    background: $second;
+  }
+
+}
+
+@media (max-width: 375px) {
+  .language select{
+    width: 100%;
+  }
+}

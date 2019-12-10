@@ -1,0 +1,204 @@
+.border{
+  background:url("../images/bg-2.png") left top no-repeat,
+  url("../images/bg-1.jpg") $black center top no-repeat;
+
+  padding-bottom: 115px;
+}
+
+.border__wrap{
+  padding-top: 55px;
+}
+
+.border__header{
+  background: $white;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1025px;
+  margin-bottom: 165px;
+}
+
+.border__info{
+  max-width: 590px;
+}
+
+.border__title {
+  font-size: 42px;
+  font-family: "Gotham Book", sans-serif;
+  color: $white;
+  line-height: 1.381;
+  margin: 0;
+
+
+  &::after {
+    content: '';
+    display: block;
+    background-color: $second;
+    width: 186px;
+    height: 4px;
+    margin-top: 24px;
+  }
+
+}
+
+.border__subtitle{
+  font-size: 42px;
+  font-family: "Gotham",sans-serif;
+  color: $white;
+  font-weight: bold;
+  line-height: 1.381;
+  margin: 19px 0 36px 0 ;
+}
+
+.border__description{
+  font-size: 18px;
+  font-family: "Gotham Thin",sans-serif;
+  color: $white;
+  line-height: 1.333;
+  margin: 0 0 35px 0;
+}
+
+.border__list{
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.border__btn{
+  @include button();
+}
+
+.border__item--google .border__btn{
+  @include button($background: $white, $setWidth: 192px ){
+    color: $black;
+  }
+}
+
+.border__item{
+  margin-right: 10px;
+
+  &:last-child{
+    margin-right: 0;
+  }
+
+}
+
+@media (max-width: 1024px) {
+  .border{
+    background-size: cover;
+  }
+}
+
+@media (max-width: 768px) {
+  .border{
+
+    &__title {
+      font-size: 32px;
+    }
+
+    &__subtitle{
+      font-size: 32px;
+    }
+
+    &__description{
+      font-size: 16px;
+    }
+
+    &__btn{
+      @include button(){
+        font-size: 16px;
+      };
+    }
+
+    &__item--google .border__btn{
+      @include button($background: $white, $setWidth: 192px ){
+        color: $black;
+        font-size: 16px;
+      }
+    }
+
+    &__header{
+      margin-bottom:  100px;
+      width: 100%;
+    }
+
+  }
+}
+
+
+@media (max-width: 480px) {
+  .border{
+
+    &__wrap{
+      padding-top: 15px;
+    }
+
+  }
+
+  .border {
+    padding-bottom: 60px;
+
+    &__list {
+      flex-wrap: wrap;
+    }
+
+    &__btn{
+      @include button(){
+        font-size: 16px;
+        margin-bottom: 10px;
+      };
+    }
+
+  }
+
+}
+
+
+@media (max-width: 320px) {
+  .border{
+    padding-bottom: 60px;
+
+    &__list{
+      flex-wrap: wrap;
+    }
+
+    &__title {
+      font-size: 22px;
+      width: 250px;
+
+      &::after{
+        width: 110px;
+      }
+
+    }
+
+    &__subtitle{
+      font-size: 22px;
+      width: 250px;
+    }
+
+    &__description{
+      width: 250px;;
+    }
+
+    &__btn{
+      @include button(){
+        font-size: 16px;
+        margin-bottom: 10px;
+      };
+    }
+
+    &__item--google .border__btn{
+         @include button($background: $white, $setWidth: 192px ){
+           color: $black;
+           font-size: 16px;
+         }
+    }
+
+    &__header{
+      margin-right: 0;
+      margin-bottom:  60px;
+    }
+
+  }
+}
