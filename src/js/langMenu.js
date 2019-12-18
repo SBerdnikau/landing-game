@@ -1,0 +1,46 @@
+function DropDown(el) {
+    this.lang = el;
+    this.placeholder = this.lang.children('span');
+    this.opts = this.lang.find('ul.dropdown > li');
+    this.src = '';
+    this.val = '';
+    this.index = -1;
+    this.initEvents();
+}
+DropDown.prototype = {
+    initEvents : function() {
+        var obj = this;
+
+        obj.lang.on('click', function(event){
+            $(this).toggleClass('active');
+            return false;
+        });
+
+        obj.opts.on('click',function(){
+            var opt = $(this);
+            obj.val = opt.text();
+            obj.index = opt.index();
+            obj.placeholder.text(obj.val);
+        });
+
+    },
+
+
+    getValue : function() {
+        return this.val;
+    },
+    getIndex : function() {
+        return this.index;
+    }
+}
+
+$(function() {
+
+    var lang = new DropDown( $('#lang') );
+
+    $(document).click(function() {
+        // all dropdowns
+        $('.language').removeClass('active');
+    });
+
+});

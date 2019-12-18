@@ -1,0 +1,174 @@
+$color-whoWeAre-title:   #222222;
+$color-whoWeAre-text:   #999999;
+$color-whoWeAre-bg:     #fafafa;
+
+.whoWeAre{
+  background: $color-whoWeAre-bg;
+
+  &__h2{
+    font-size: 36px;
+    font-family: "Gotham Book",sans-serif;
+    color: $color-whoWeAre-title;
+    font-weight: bold;
+    line-height: 1;
+    text-align: justifyLeft;
+    margin: 0;
+
+    &::after{
+      content: '';
+      display: block;
+      background-color: $second;
+      width: 49px;
+      height: 7px;
+      margin-top: 17px;
+    }
+  }
+
+  &__title{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 65px;
+    padding-top: 25px;
+  }
+
+  &__description{
+    font-size: 15px;
+    font-family: "Gotham Light",sans-serif;
+    color: $color-whoWeAre-text;
+    font-style: italic;
+    line-height: 1.667;
+    max-width: 762px;
+    margin: 0 0 7px 0;
+  }
+
+
+  &__slider{
+    background: $white;
+    padding: 40px 30px ;
+  }
+
+  &__information{
+    display: flex;
+    justify-content: center;
+  }
+
+  &__name{
+    font-size: 21px;
+    font-family: "Gotham Bold", sans-serif;
+    color: $second;
+    font-weight: bold;
+    line-height: 1.19;
+    margin: 0;
+    padding: 5px;
+  }
+
+  &__project{
+    font-size: 18px;
+    font-family: "Gotham Book",sans-serif;
+    color: $color-whoWeAre-text;
+    font-style: italic;
+    line-height: 1.389;
+    margin: 0;
+    padding: 5px;
+  }
+
+  &__carousel{
+    position: relative;
+  }
+
+}
+
+.orange{
+  color: $second;
+}
+
+.item{
+  width: 63px;
+  height: 63px;
+  cursor: pointer;
+
+  &:hover{
+    outline: 1px solid $second;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .whoWeAre{
+
+    &__h2{
+      font-size: 26px;
+      margin-bottom: 15px;
+    }
+
+    &__title{
+      display: block;
+      margin-bottom: 20px;
+      padding-bottom: 25px;
+    }
+
+    &__slider{
+      background: $white;
+      padding: 30px 30px ;
+    }
+
+    &__name{
+      font-size: 18px;
+      font-family: "Gotham Bold", sans-serif;
+      color: $second;
+      font-weight: bold;
+      line-height: 1.19;
+      margin: 0;
+      padding: 5px;
+    }
+
+    &__project{
+      font-size: 15px;
+    }
+
+  }
+}
+
+@media (max-width: 425px) {
+  .item{
+    width: 50px;
+    height: auto;
+  }
+  .owl-nav{
+    display: none;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 320px) {
+  .whoWeAre{
+
+    &__h2{
+      font-size: 26px;
+      padding-bottom: 15px;
+    }
+
+    &__title{
+      display: block;
+      margin-bottom: 20px;
+      padding-bottom: 25px;
+      width: 270px;
+    }
+
+    &__description{
+      width: 270px;
+    }
+
+    &__slider{
+      padding: 15px 15px ;
+    }
+
+    &__name{
+      font-size: 15px;
+    }
+
+    &__project{
+      font-size: 13px;
+    }
+
+  }
+}

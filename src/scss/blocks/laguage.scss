@@ -1,0 +1,108 @@
+.language {
+  /* Size and position */
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 130px;
+
+  /* Styles */
+  font-size: 15px;
+  font-family: "Gotham Book", sans-serif;
+  color: $color-menuText;
+  line-height: 3.867;
+  cursor: pointer;
+  outline: none;
+}
+
+.language:after {
+  content: '▼';
+  display: block;
+  position: absolute;
+  right: 35px;
+  top: 3%;
+  color: $first;
+}
+
+.language .dropdown {
+  /* Size &amp; position */
+  position: absolute;
+  padding: 0;
+  top: 79%;
+  width: 130px;
+  left: -22px;
+  right: 0;
+  z-index: 1;
+
+  /* Styles */
+  background: white;
+  border-radius: inherit;
+  border: 1px solid rgba(0,0,0,0.17);
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  font-weight: normal;
+  transition: all 0.5s ease-in;
+  list-style: none;
+
+  /* Hiding */
+  opacity: 0;
+  pointer-events: none;
+}
+
+.language .dropdown li a {
+  font-size: 15px;
+  font-family: "Gotham Book", sans-serif;
+  color: $color-menuText;
+  line-height: 1.867;
+  display: block;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  border-bottom: 1px solid #e6e8ea;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,1);
+  transition: all 0.3s ease-out;
+}
+
+
+.language .dropdown li:first-of-type a {
+  border-radius: 7px 7px 0 0;
+}
+
+.language .dropdown li:last-of-type a {
+  border-radius: 0 0 7px 7px;
+  border: none;
+}
+
+/* Hover state */
+
+.language .dropdown li:hover a {
+  color: $second;
+}
+
+.language .dropdown:after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  bottom: 100%;
+  right: 15px;
+  border-width: 0 6px 6px 6px;
+  border-style: solid;
+  border-color: #fff transparent;
+}
+
+.language .dropdown:before {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  bottom: 100%;
+  right: 13px;
+  border-width: 0 8px 8px 8px;
+  border-style: solid;
+  border-color: rgba(0,0,0,0.1) transparent;
+}
+
+.language.active .dropdown {
+  opacity: 1;
+  pointer-events: auto;
+}
+

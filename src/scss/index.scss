@@ -1,0 +1,23 @@
+@import 'normalize';
+@import 'variables';
+@import 'fonts';
+@import 'mixins';
+@import 'core';
+
+@import "../../node_modules/owl.carousel/src/scss/owl.carousel.scss";
+@import "../../node_modules/owl.carousel/src/scss/owl.theme.default.scss";
+
+@import "blocks/border";
+@import "blocks/header";
+@import "blocks/menu";
+@import "blocks/laguage";
+@import "blocks/social";
+@import "blocks/buyGame";
+@import "blocks/whoWeAre";
+@import "blocks/games";
+@import "blocks/works";
+@import "blocks/information";
+@import "blocks/footer";
+@import "blocks/copyright";
+@import "blocks/owl.carousel__arrow";
+

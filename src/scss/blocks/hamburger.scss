@@ -1,0 +1,17 @@
+.hamburger__btn{
+  display: none;
+
+  span {
+    display: block;
+    width: 60px;
+    height: 60px;
+    background: #000;;
+  }
+}
+
+@media (max-width: 768px) {
+  .hamburger__btn{
+    display: block;
+  }
+
+}

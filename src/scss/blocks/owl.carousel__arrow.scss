@@ -1,0 +1,88 @@
+$color-owl-btn:     #3a3a3a;
+
+//переопределение встроеного цвета стрелок
+.owl-carousel .owl-nav button.owl-prev, .owl-carousel .owl-nav button.owl-next{
+  color: transparent;
+  &:hover{
+    color: transparent;
+  }
+}
+
+.owl-theme .owl-nav {
+  margin: 0;
+  padding: 0;
+}
+
+//контейнер для слайдов встроенный
+.owl-stage-outer{
+  margin: 0 auto;
+  width: 975px;
+  padding: 5px;
+}
+
+.owl-next span{
+  display: block;
+  position: absolute;
+  top: 5%;
+  right: 0;
+  background: url("../images/arrow-right.png") $color-owl-btn center center no-repeat;
+  width: 63px;
+  height: 63px;
+
+  &:hover{
+    background: url("../images/arrow-right.png") $second center center no-repeat;
+  }
+
+}
+
+
+.owl-prev span{
+  display: block;
+  position: absolute;
+  top: 5%;
+  left: 0;
+  background: url("../images/arrow_left.png") $color-owl-btn center center no-repeat;
+  width: 63px;
+  height: 63px;
+
+  &:hover{
+    background: url("../images/arrow_left.png") $second center center no-repeat;
+  }
+
+}
+
+@media (max-width: 1024px) {
+  .owl-stage-outer{
+    width: 750px;
+  }
+}
+
+@media (max-width: 768px) {
+  .owl-stage-outer{
+    width: 526px;
+  }
+}
+
+@media (max-width: 425px) {
+  .owl-stage-outer{
+    width: 314px;
+  }
+}
+
+@media (max-width: 667px) {
+  .owl-stage-outer{
+    width: 342px;
+  }
+}
+
+@media (max-width: 375px) {
+  .owl-stage-outer {
+    width: 281px;
+  }
+}
+
+@media (max-width: 320px) and  (min-width: 320px){
+  .owl-stage-outer {
+    width: 230px;
+  }
+}
